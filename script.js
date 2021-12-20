@@ -3,7 +3,7 @@ function Animal(name) {
   this.speed = 0;
 }
 Animal.prototype.run = function () {
-  alert(this.name + " бежит!");
+  alert(`${this.name} бежит!`);
 };
 
 function Rabbit(name) {
@@ -74,7 +74,8 @@ Snake.prototype = Object.create(Animal.prototype);
 Snake.prototype.constructor = Snake;
 
 Snake.prototype.run = function () {
-  Animal.prototype.run.apply(this);
+  // Animal.prototype.run.apply(this);
+  alert(`${this.name} Ползет!`);
   alert(`${this.name} шипит!`);
 };
 
